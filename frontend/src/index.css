@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 40%, #90caf9 80%, #64b5f6 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Removed the SVG background-image with dots */
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Add a subtle overlay to better connect UI elements with background */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Add animation for subtle background movement */
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }  
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
